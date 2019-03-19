@@ -19,3 +19,13 @@ Run time server:
 Retrieve the current time:
 
     $ curl localhost:2359/time
+
+## dice
+
+Run dice server:
+
+    $ go run dice.go
+
+Roll the dice:
+
+    $ curl localhost:6666/dice
