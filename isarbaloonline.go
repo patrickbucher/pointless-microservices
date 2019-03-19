@@ -9,6 +9,7 @@ const url = "http://arbalo.ch"
 
 func main() {
 	http.HandleFunc("/isarbaloonline", func(w http.ResponseWriter, r *http.Request) {
+		w.Write([]byte("Is arbalo.ch online? "))
 		resp, err := http.Get(url)
 		if err != nil {
 			log.Println(err)
