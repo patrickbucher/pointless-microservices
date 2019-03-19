@@ -8,7 +8,7 @@ import (
 const url = "http://arbalo.ch"
 
 func main() {
-	http.HandleFunc("/isarbalo.chonline", func(w http.ResponseWriter, r *http.Request) {
+	http.HandleFunc("/isarbaloonline", func(w http.ResponseWriter, r *http.Request) {
 		resp, err := http.Get(url)
 		if err != nil {
 			log.Println(err)
