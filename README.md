@@ -30,12 +30,12 @@ Roll the dice:
 
     $ curl localhost:6666/dice
 
-## onlinecheck
+## isarbaloonline
 
-Run onlinecheck server:
+Run isarbaloonline server:
 
-    $ go run onlinecheck.go
+    $ go run isarbaloonline.go
 
 Find out whether or not `http://arbalo.ch` is already online:
 
-    $ curl localhost:1234/isarbalo.chonline
+    $ curl localhost:1234/isarbaloonline
