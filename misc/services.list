@@ -1,6 +1,0 @@
-#!/bin/sh
-
-SERVICES="date:3112
-time:2359
-dice:6666
-isarbaloonline:1234"
