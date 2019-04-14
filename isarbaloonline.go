@@ -3,13 +3,13 @@ package main
 import (
 	"log"
 	"net/http"
+	"os"
 )
 
 const url = "http://arbalo.ch"
 
 func main() {
-	http.HandleFunc("/isarbaloonline", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("Is arbalo.ch online? "))
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		resp, err := http.Get(url)
 		if err != nil {
 			log.Println(err)
@@ -23,5 +23,9 @@ func main() {
 		}
 		w.Write([]byte("Yes\n"))
 	})
-	log.Fatal(http.ListenAndServe("0.0.0.0:1234", nil))
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "1234"
+	}
+	log.Fatal(http.ListenAndServe("0.0.0.0:"+port, nil))
 }
